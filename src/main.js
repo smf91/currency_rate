@@ -1,5 +1,15 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import store from './store'
+import { createApp } from 'vue';
+import {Cascader, Menu, Layout, Table, Button, Spin} from 'ant-design-vue';
+import App from './App';
+import Store from './store/index'
 
-createApp(App).use(store).mount('#app')
+const app = createApp(App);
+app.config.productionTip = false
+app.use(Spin)
+app.use(Button)
+app.use(Table)
+app.use(Layout)
+app.use(Cascader)
+app.use(Menu)
+app.use(Store)
+app.mount('#app')
